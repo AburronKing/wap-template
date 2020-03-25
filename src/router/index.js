@@ -8,7 +8,7 @@ const appRoute = [
   {
     path: '/',
     name: 'home',
-    component: () => import( /* webpackChunkName: "event-deal" */ '@/components/HelloWorld.vue')
+    component: () => import( /* webpackChunkName: "HelloWorld" */ '@/components/HelloWorld.vue')
   }
 ]
 

@@ -4,6 +4,8 @@ import Vant from 'vant';
 import 'vant/lib/index.css';
 import router from './router'
 import store from './store'
+import './assets/index.stylus'
+import './assets/van.stylus'
 
 Vue.config.productionTip = false
 Vue.use(Vant);
@@ -13,3 +15,8 @@ new Vue({
   store,
   render: h => h(App),
 }).$mount('#app')
+
+// 全局返回上一页的方法
+Vue.prototype.backPage = function () {
+  this.$router.go(-1);
+}

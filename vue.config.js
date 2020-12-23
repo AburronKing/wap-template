@@ -1,36 +1,26 @@
-const path = require("path");
+// const path = require('path');
 
 module.exports = {
   publicPath: './',
   css: {
     loaderOptions: {
-      
+      postcss: {
+        plugins: [
+          require('postcss-pxtorem')({
+            rootValue: 37.5,
+            propList: ['*']
+          })
+        ]
+      }
     }
-  },
-  pluginOptions: {
-    
   },
   configureWebpack: function() {
-    if (process.env.NODE_ENV === 'production') {
-      return {
-        resolve: {
-          alias: {
-            "@": path.resolve(__dirname, "./src")
-          }
-        }
-      }
-    } else {
-      return {
-        resolve: {
-          alias: {
-            "@": path.resolve(__dirname, "./src")
-          }
-        }
-      }
-    }
+    return {
+      plugins: []
+    };
   },
   productionSourceMap: false, // 生产环境是否生成 sourceMap 文件
   devServer: {
     
   }
-}
+};

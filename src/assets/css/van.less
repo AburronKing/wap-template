@@ -1,0 +1,90 @@
+// vant 样式重置
+
+// 导航栏返回按钮样式
+.van-nav-bar .van-nav-bar__left .van-icon{
+  color: #333;
+  font-size: 20px;
+  font-weight: 700;
+}
+//  field 右边icon样式
+.van-field__right-icon {
+  color: #bfbfbf;
+}
+
+// TreeSelect 分类选择 样式重置
+.van-tree-select {
+  .van-sidebar-item--select {
+    border-color: #0482ff;
+  }
+  .van-tree-select__item {
+    font-weight: normal;
+  }
+  .van-tree-select__item--active {
+    color: #0482ff;
+  }
+}
+
+// filed 的分块样式
+.cvt-block {
+  background-color: #fff;
+  border-radius: 6px;
+  overflow: hidden;
+  padding: 0 16px;
+  margin-bottom: 12px;
+  box-shadow: 0 0 10px #ebebeb;
+  &-padding {
+    padding: 10px 16px;
+  }
+  &-title {
+    font-size: 14px;
+    padding: 10px 0;
+    position: relative;
+    &.is-require {
+      &:before {
+        content: '*';
+        color: #ee0a24;
+        font-size: 0.37333rem;
+        position: absolute;
+        left: -10px;
+      }
+    }
+  }
+  .van-cell {
+    padding: 10px 0;
+    &.van-cell--required::before {
+      left: -10px;
+    }
+    // 表单的下横线取消
+    &:not(:last-child)::after {
+      border-bottom: none;
+    }
+  }
+  //  textarea类型filed的样式
+  .cvt-textarea {
+    display: block;
+    padding: 10px 0;
+    // 如需border-top
+    &-border {
+      border-top: 1px solid #ebebeb;
+      margin-top: 6px;
+    }
+    .van-cell__value {
+      padding-left: 10px;
+    }
+  }
+}
+
+// tabs
+.van-tabs {
+  .van-tabs__line {
+    background-color: #0482ff;
+  }
+  .van-tab.van-tab--active .van-tab__text {
+    color: #0482ff;
+  }
+}
+
+// cvt-box-padding 主页面的padding
+.cvt-box-padding {
+  padding: 12px 12px 70px;
+}

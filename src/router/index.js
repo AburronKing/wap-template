@@ -1,3 +1,10 @@
+/*
+ * @Author: Hong Kai
+ * @Date: 2020-03-20 16:45:58
+ * @LastEditors: Hong Kai
+ * @LastEditTime: 2020-12-23 16:04:47
+ * @Description: * 
+ */
 import Vue from 'vue'
 import Router from 'vue-router'
 
@@ -7,9 +14,25 @@ Vue.use(Router)
 const appRoute = [
   {
     path: '/',
+    redirect: '/home'
+  },
+  {
+    path: '/home',
     name: 'home',
-    component: () => import( /* webpackChunkName: "HelloWorld" */ '@/components/HelloWorld.vue')
-  }
+    component: () => import('@/views/home')
+  },
+  {
+    path: '/layout',
+    name: 'layout',
+    component: () => import('@/views/layout'),
+    children: [
+      {
+        path: '/page',
+        name: 'page',
+        component: () => import('@/views/page')
+      },
+    ]
+  },
 ]
 
 

@@ -1,9 +1,0 @@
-// van 样式重置
-.van-cell
-  padding 15px 20px
-  
-.van-nav-bar .van-icon
-  color #606266
-  font-size 22px
-.van-icon-arrow-left
-  font-size 22px
